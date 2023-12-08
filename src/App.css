@@ -36,3 +36,79 @@
     transform: rotate(360deg);
   }
 }
+i {
+  font-family: 'tomorrow' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#navigation{
+  height: 68px;
+}
+
+#logo-img{
+  margin-left: 42px;
+  transform:scale(1.18);  
+}
+
+#navigation-all-item:first-child{
+  margin-left: 16px;
+}
+
+#navigation-item{
+  display: flexbox;
+  color: rgb(235, 235, 235);
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+#search-icon{
+  width: 40px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+#input-group{
+  top: 5px;
+  display: flex;
+  width: 355px;
+  height: 30px;
+  position: absolute;
+  right: 50px;
+}
+
+#form{
+  border-radius: 3px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+#form::placeholder{color: rgb(166, 166, 166);}
+
+#navigation-input{
+  position: relative;
+  height: 40px;
+}
+
+#input-check{
+  position: absolute;
+  top: 3px;
+  text-align: center;
+}
+
+#input-button{
+  width: 70px;
+  border-radius: 3px;
+  text-align: center;
+  display: block;
+  border: 1px solid red;
+}
+
