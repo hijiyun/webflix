@@ -14,7 +14,11 @@ function getMovies(){
 
     dispatch({
       type: "GET_MOVIES_SECCES",
-      payload: {popularMovies: popularMovie.data, topRatedMovies: topRatedMovie.data, upcomingMovies:upcomingMovie.data}
+      payload: {
+        popularMovies: popularMovie.data, 
+        topRatedMovies: topRatedMovie.data, 
+        upcomingMovies: upcomingMovie.data
+      }
     })
   }
 }
