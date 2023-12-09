@@ -66,6 +66,10 @@ i {
   color: rgb(235, 235, 235);
   font-size: 14px;
   padding: 0 10px;
+
+  &:hover{
+    color: red;
+  }
 }
 
 #search-icon{
