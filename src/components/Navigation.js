@@ -23,7 +23,7 @@ function NavScrollExample() {
           >
               <Nav.Link id='navigation-item' href="/">홈</Nav.Link>
               <Nav.Link id='navigation-item' href="/">시리즈</Nav.Link>
-              <Nav.Link id='navigation-item' href="/">영화</Nav.Link>
+              <Nav.Link id='navigation-item' href="/movies">영화</Nav.Link>
               <Nav.Link id='navigation-item' href="/">NEW! 요즘 대세 콘텐츠</Nav.Link>
               <Nav.Link id='navigation-item' href="/">내기 찜한 리스트</Nav.Link>
               <Nav.Link id='navigation-item' href="/">언어별로 찾아보기</Nav.Link>
