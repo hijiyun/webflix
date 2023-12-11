@@ -7,13 +7,13 @@ import Banner from '../components/Banner';
 const Home = () => {
   const dispatch = useDispatch();
   const {popularMovies, topRatedMovies, upcomingMovies} = useSelector(state => state.movie)
-
+  
   useEffect(()=>{
     dispatch(movieAction.getMovies())
   },[])
   return (
     <div>
-      <Banner movie={popularMovies.result[0]}/>
+      {popularMovies.results && <Banner movie={popularMovies.results[0]}/>}
     </div>
   )
 }
