@@ -9,17 +9,21 @@ function getMovies(){
       const topRatedMovieApi = api.get(`movie/top_rated?language=en-US&page=1`)
   
       const upcomingMovieApi = api.get(`movie/upcoming?language=en-US&page=1`)
+
+      const genreApi = api.get(`/genre/movie/list?language=en`)
   
-      let [popularMovie, topRatedMovie, upcomingMovie] = await Promise.all([
-        popularMovieApi, topRatedMovieApi, upcomingMovieApi
+      let [popularMovie, topRatedMovie, upcomingMovie, genreList] = await Promise.all([
+        popularMovieApi, topRatedMovieApi, upcomingMovieApi, genreApi
       ]);
+      console.log("genreList",genreList)
   
       dispatch({
         type: "GET_MOVIES_SECCES",
         payload: {
           popularMovies: popularMovie.data, 
           topRatedMovies: topRatedMovie.data, 
-          upcomingMovies: upcomingMovie.data
+          upcomingMovies: upcomingMovie.data,
+          genreList: genreList.data.genres,
         }
       })
     } catch (error) {
