@@ -1,53 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-i {
-  font-family: 'tomorrow' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 #navigation{
   height: 68px;
 }
@@ -118,9 +68,11 @@ i {
 
 .banner{
   background-size: cover;
+  width: 100%;
   height: 600px;
   display: flex;
   align-items: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .banner::before{
@@ -140,22 +92,71 @@ i {
 }
 
 .movie-slide{
-  
+  margin-bottom: 5%;
+  background-color: black;
+}
+
+.movies-series{
+  margin: 0 2%;
+}
+.movies-series h1{
+  color: aliceblue;
+  font-size: x-large;
 }
 
 .card{
-  background-size: cover;
-  width: 300px;
-  height: 200px;
+  position: relative;
+  margin-right: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+  transition: 0.5s;
 }
 
-.overlay{
-  opacity: 0;
+.card-img{
+  background-size: cover;
+  width: 340px;
+  height: 130px;
+}
+
+.card:hover .card-img{
+  width: 600px;
+  height: 300px;
+  transition: 0.5s;
+}
+
+
+.card:hover .overlay {
+  opacity: 1;
   background-color: rgba(47, 47, 47, 0.5);
+  z-index: 99999;
+}
+
+.card:hover {
+  transition: 0.5s;
+}
+
+
+.overlay{
+  background: rgba(43, 41, 41, 0.9);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  color: white;
+  opacity: 0;
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
-.card:hover .overlay{
-  opacity: 1;
+.head{
+  font-weight: bolder;
+  transition: all 0.7s;
 }
