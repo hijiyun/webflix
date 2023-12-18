@@ -104,6 +104,10 @@
   font-size: x-large;
 }
 
+.badge{
+  margin: 0 2px;
+}
+
 .card{
   position: relative;
   margin-right: auto;
