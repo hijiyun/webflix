@@ -15,18 +15,18 @@ const Home = () => {
   },[])
 
   if(loading){
-    return <ClipLoader color="#ffff" loading={loading} size={150} aria-label="Loading Spinner" data-testid="loader"
+    return <ClipLoader color="#ffff" loading={loading} size={50} aria-label="Loading Spinner" data-testid="loader"
   />
   }
   return (
     <div>
       <Banner movie={popularMovies.results[0]}/>
       <div className='movies-series'>
-        <h1>보고 또 봐도 좋은 인기 시리즈</h1>
+        <h1 className='title'>보고 또 봐도 좋은 인기 시리즈</h1>
         <MovieSlide movies={popularMovies}/>
-        <h1>오늘 탑20 시리즈</h1>
+        <h1 className='title'>오늘 탑20 시리즈</h1>
         <MovieSlide movies={topRatedMovies}/>
-        <h1>이제 올라올 시리즈</h1>
+        <h1 className='title'>이제 올라올 시리즈</h1>
         <MovieSlide movies={upcomingMovies}/>
       </div>
       <Footer />
