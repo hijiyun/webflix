@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../img/Netflix_Logo.png'
 import { CiSearch } from "react-icons/ci";
 
 function NavScrollExample() {
