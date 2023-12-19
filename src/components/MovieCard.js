@@ -14,7 +14,7 @@ const MovieCard = ({item}) => {
     <div className='card' style={{border:'none'}}>
       <div 
         className='card-img'
-        style={{backgroundImage:"URL(" + `https://image.tmdb.org/t/p/original//${item.poster_path}` + ")",
+        style={{backgroundImage:"URL(" + `https://image.tmdb.org/t/p/original/${item.poster_path}` + ")",
   }}>
     </div>
           <div className='overlay' onClick={goingDetailpage}>
