@@ -2,9 +2,14 @@ import React from 'react'
 import Badge from 'react-bootstrap/Badge';
 import { useSelector } from 'react-redux';
 import StartRating from './StartRating';
+import {useNavigate} from 'react-router-dom'
 
 const MovieCard = ({item}) => {
   const { genreList } = useSelector(state=>state.movie)
+  const navigate = useNavigate()
+  let goingDetailpage = () => {
+    navigate(`/movies/${item.id}`, {state: item})
+  }
   return (
     <div className='card' style={{border:'none'}}>
       <div 
@@ -12,7 +17,7 @@ const MovieCard = ({item}) => {
         style={{backgroundImage:"URL(" + `https://image.tmdb.org/t/p/original//${item.poster_path}` + ")",
   }}>
     </div>
-          <div className='overlay'>
+          <div className='overlay' onClick={goingDetailpage}>
             <div className='overlay-info'>
               <h1 className='head'>{item.title}</h1> 
               <div className='overlay-badge'>{item.genre_ids.map(id=><Badge bg="secondary">
