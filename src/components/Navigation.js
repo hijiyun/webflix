@@ -11,7 +11,7 @@ function NavScrollExample() {
     <Navbar variant="dark" expand="lg" id='navigation' className="bg-black">
       <Container fluid>
         <Navbar.Brand href="/" className='navigation-logo'>
-          <img id='logo-img' width={100} src={logo} alt='logo'/>
+          <p id='logo' style={{width:100}}>WEBFLIX</p>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
