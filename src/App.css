@@ -111,14 +111,15 @@
 .card{
   position: relative;
   margin-right: auto;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
   cursor: pointer;
   -webkit-box-shadow: 0 0 5px #000;
   box-shadow: 0 0 5px #000;
   transition: 0.5s;
+  z-index: 1; /* 기본적으로 z-index를 설정 */
+}
+
+.card:hover{
+  z-index: 2; /* hover 시 z-index를 더 높게 설정하여 다른 카드 위로 올라오도록 함 */
 }
 
 .card-img{
@@ -128,23 +129,21 @@
 }
 
 .card:hover .card-img{
-  width: 600px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   transition: 0.5s;
-  
+  transform: scale(1.2); /* 가운데로 확대되도록 설정 */
+  z-index: 2; /* hover 시 z-index를 더 높게 설정하여 다른 카드 위로 올라오도록 함 */
 }
 
 .card:hover .overlay {
   opacity: 1;
   background-color: rgba(47, 47, 47, 0.5);
-  width: 600px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
+  transform: scale(1.2); /* 가운데로 확대되도록 설정 */
+  z-index: 2; /* hover 시 오버레이도 같이 위로 올라오도록 함 */
 }
-
-.card:hover {
-  transition: 0.5s;
-}
-
 
 .overlay{
   background: rgba(43, 41, 41, 0.9);
@@ -157,8 +156,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 3;
 }
 
 .head{
