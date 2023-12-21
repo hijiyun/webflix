@@ -95,12 +95,13 @@
 }
 
 .movie-slide{
-  margin-bottom: 5%;
   background-color: black;
+  display: block;
 }
 
 .movies-series{
-  margin: 0 2%;
+  /* margin: 0 2%; */
+  margin: 0 10% 0 7%;
 }
 .movies-series .title{
   color: aliceblue;
@@ -134,29 +135,26 @@
 }
 
 .card:hover .card-img{
-  width: 220px;
-  height: 360px;
-  border-radius:  5px 5px 35px 35px;
-  overflow: hidden;
+  width: 221px;
+  height: 341px;
   transition: 0.5s;
   transform: scale(1); 
   position: absolute;
-  margin-right: 10px;
 }
 
 .card:hover .overlay {
   opacity: 1;
   background-color: rgba(47, 47, 47, 0.5);
-  width: 220px;
-  height: 360px;
+  width: 221px;
+  height: 341px;
   transform: scale(1);
   margin-right: 1px;
   transition: 0.5s;
-  border-radius:  5px 5px 35px 35px;
 }
 
 .overlay{
   background: rgba(43, 41, 41, 0.9);
+  height: 341;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 1fr;
@@ -209,18 +207,29 @@
 
 .react-multiple-carousel__arrow--left{
   left: calc(1% + -20px) !important;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(216, 216, 216, 0.01)) !important;
 }
+.react-multiple-carousel__arrow--left:hover{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.78), rgba(117, 117, 117, 0.01)) !important;
+}
+
 
 .react-multiple-carousel__arrow--right{
   right: calc(1% + -14px) !important;
-  background-image: linear-gradient(to right, rgba(216, 216, 216, 0.01), rgba(0, 0, 0, 1)) !important;
   width: 110px !important;
 }
+.react-multiple-carousel__arrow--right:hover{
+  background-image: linear-gradient(to right, rgba(117, 117, 117, 0.01), rgba(0, 0, 0, 0.78)) !important;
+}
+
+
 
 .react-multiple-carousel__arrow{
-  background-color: rgba(255, 255, 255, 0) !important;
   border-radius: 0 !important;
+  background-color: rgba(255, 255, 255, 0) !important;
   min-width: 110px !important;
   min-height: 500px !important;
+}
+
+.react-multiple-carousel__arrow:hover{
+  background-color: rgba(255, 255, 255, 0) !important;
 }
