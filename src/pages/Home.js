@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../components/Banner';
 import MovieSlide from '../components/MovieSlide';
 import ClipLoader from "react-spinners/ClipLoader";
+import "react-multi-carousel/lib/styles.css";
 import Footer from '../components/Footer';
 
 const Home = () => {
