@@ -4,7 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 import MovieCard from './MovieCard';
 
 const MovieSlide = ({movies}) => {
-  console.log("movies?",movies)
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -13,7 +12,7 @@ const MovieSlide = ({movies}) => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -24,9 +23,13 @@ const MovieSlide = ({movies}) => {
       items: 3
     }
   };
+
   return (
     <div className='movie-slide'>
-      <Carousel responsive={responsive}>
+      <Carousel
+      responsive={responsive}
+      autoPlay={false}
+      >
         {
           movies.results.map(item => <MovieCard item={item}/>)
         }
