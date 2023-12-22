@@ -27,7 +27,7 @@ const StartRating = ({rating}) => {
   return (
     <div>
       {renderStars()}
-      <span>{rating.toFixed(1)}</span>
+      <span>{rating.toFixed(1)} / 10</span>
     </div>
   );
 };
