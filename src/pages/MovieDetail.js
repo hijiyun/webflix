@@ -56,14 +56,32 @@ const MovieDetail = () => {
           </div>
           <div className='movie-detail-list' style={{color:'white'}}>
             <p className='movie-detail-title'>{state.title}</p>
-            <p>{movieDetails ? movieDetails.tagline : null} </p>
-            <p className='movie-detail-badge'>
-            {state.genre_ids.map(id=><span style={{marginRight:8}}>{genreList.find(item => item.id === id).name}</span>)}
-            </p>
-            <p>{movieDetails ? movieDetails.release_date : null}</p>
-            <p>{movieDetails ? movieDetails.production_countries[0].name : null}</p>
-            <p>{movieDetails ? movieDetails.runtime : null}</p>
-            <p className='movie-detail-rating'><StartRating rating={state.vote_average} /></p>
+            <p className='movie-detail-title2'>{movieDetails ? movieDetails.tagline : null} </p>
+
+            <div style={{marginTop:10, fontWeight:700}}>
+              <div style={{marginBottom:8}}>
+                <span className='tag'>개봉</span>
+                <span>{movieDetails ? movieDetails.release_date : null}</span> <br></br>
+              </div>
+              <div style={{marginBottom:8}}>
+                <span className='tag'>국가</span>
+                <span>{movieDetails ? movieDetails.production_countries[0].name : null}</span><br></br>
+              </div>
+              <div style={{marginBottom:8}}>
+                <span className='tag'>시간</span>
+                <span>{movieDetails ? movieDetails.runtime : null} min</span><br></br>
+              </div>
+              <div style={{marginBottom:8}}>
+                <span className='tag'>장르</span>
+                <span className='movie-detail-badge'>
+                {state.genre_ids.map(id=><span style={{marginRight:8}}>{genreList.find(item => item.id === id).name}</span>)}
+                </span>
+              </div>
+              <div className='movie-detail-rating'>
+                <span className='tag'>평점</span>
+                <span><StartRating rating={state.vote_average} /></span>
+              </div>
+            </div>
             <p className='movie-detail-overview'>{state.overview}</p>
           </div>
         </div>
