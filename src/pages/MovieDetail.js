@@ -23,8 +23,6 @@ const MovieDetail = () => {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${API_TOKEN}`, 
         };
-        
-        console.log(url)
         const response = await axios.get(url, {headers});
         setMovieDetails(response.data);
       } catch (error) {
@@ -47,7 +45,7 @@ const MovieDetail = () => {
   return (
     <div style={{position:'relative'}}>
       <div className='movie-detail' 
-      style={{backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), URL(" + `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${state.backdrop_path}` + ")",
+      style={{backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), URL(" + `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${state.backdrop_path}` + ")",
       }}>
         <div className='blur'></div>
         <div className='movie-detail-info'>
